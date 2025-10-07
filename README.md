@@ -1,7 +1,5 @@
 # Travel Journal Gen AI Integration
 
-Starter code for authentication/authorization module at WBS Coding School
-
 ## Setup
 
 - use template repo to make a repo under your GitHub account

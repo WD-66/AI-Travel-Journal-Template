@@ -65,8 +65,8 @@ CLIENT_BASE_URL=http://localhost:5173
 
 - Inside of `src/components/Chat/ChatForm.tsx`, you will need to import your new functions
 - You will then need to check if a user is `signedIn` (hint: you will get this by consuming the `AuthContext`)
-- Inside of handle submit if `signedIn` is `true` save the response from calling `fetchPersonalChat` (if `isStream` is `true`) or `fetchPersonalChat` (if `isStream` is `false`).
-- If `signedIn` is false, save the response from `fetchChat` and `fetchPersonalChat` respectively
+- Inside of handle submit if `signedIn` is `true` save the response from calling `fetchPersonalChat` (if `isStream` is `true`) or `createPersonalChat` (if `isStream` is `false`).
+- If `signedIn` is false, save the response from `fetchChat` and `createChat` respectively
 
 ### Filter out `assistant` messages without content
 

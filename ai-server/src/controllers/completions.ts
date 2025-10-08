@@ -175,7 +175,7 @@ export const createPersonalizedChatCompletion: RequestHandler<
 
   const model = process.env.AI_MODEL || 'gemini-2.0-flash';
 
-  // Step 1: Check if the prompt is about Pokémon
+  // Step 1: Check if the prompt is about travel recommendations
   const checkIntentCompletion = await client.chat.completions.create({
     model,
     tools,
@@ -196,6 +196,7 @@ export const createPersonalizedChatCompletion: RequestHandler<
 
   // push message to message history
   currentChat.history.push(checkIntentCompletionMessage);
+  console.log('message history before calling tools:', currentChat.history);
 
   // since the model is determining tool call, we only run them if needed
   if (checkIntentCompletionMessage.tool_calls) {
